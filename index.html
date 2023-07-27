@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Burst</title>
-    <link rel="icon" type="image/png" href="./images/logo.png"/>
+    <link rel="icon" type="image/png" href="./images/logo.png" />
     <!-- tailwind & deisyui-->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
@@ -34,6 +34,30 @@
         color: orangered;
         text-decoration: none;
       }
+      .modal {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(77, 77, 77, 1);
+        transition: all 0.4s;
+      }
+      .modal:terget {
+        visibility: visible;
+        opacity: 1;
+      }
+      .modalcontent {
+        position: relative;
+        width: 256px;
+        height: 320px;
+      }
+
+
     </style>
   </head>
   <body class="w-11/12 mx-auto">
@@ -216,7 +240,7 @@
 
     <main>
       <!-- deal of the day -->
-      <section class="my-20 flex flex-col justify-between">
+      <section id="wrapper" class="my-20 flex flex-col justify-between">
         <div class="grid md:h-48 grid-rows-2 md:grid-cols-2 gap-10">
           <div
             class="deal-text flex flex-col justify-around h-44 text-center md:text-left"
@@ -264,6 +288,7 @@
         >
           <!-- card container -->
           <div
+            id="wrapper"
             class="card card-compact w-64 md:w-56 h-80 mb-10 bg-base-100 shadow-xl bg-slate-100"
           >
             <figure><img src="./images/fruit6.png" alt="Shoes" /></figure>
@@ -300,7 +325,55 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <button class="btn btn-link">Link</button>
+              <a href="#modalbox1" class="btn btn-link">link</a>
+            </div>
+          </div>
+
+          <div id="modalbox1" class="modal">
+            <div class="modalcontent w-64 md:w-56 h-80">
+              <div
+                 class="card card-compact w-64 md:w-56 h-80 mb-10 bg-base-100 shadow-xl bg-slate-100"
+              >
+                <figure><img src="./images/fruit6.png" alt="Shoes" /></figure>
+                <div class="card-body flex flex-col justify-evenly items-center">
+              <h2 class="card-title mx-auto font-extrabold text-2xl">
+                12.90$ - 18.85$
+              </h2>
+              <p class="text-base font-medium">Apples</p>
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <div class="flex flex-row justify-around w-full">
+                <a href="" class="btn btn-error">buy</a>
+              <a href="#wrapper" class="madalclose btn btn-outline btn-error">close</a>
+              </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -341,9 +414,58 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <button class="btn btn-link">Link</button>
+             <a href="#modalbox2"> <button class="btn btn-link">Link</button></a>
             </div>
           </div>
+
+          <div id="modalbox2" class="modal">
+            <div class="modalcontent w-64 md:w-56 h-80">
+              <div
+                 class="card card-compact w-64 md:w-56 h-80 mb-10 bg-base-100 shadow-xl bg-slate-100"
+              >
+                <figure><img src="./images/fruit7.png" alt="Shoes" /></figure>
+                <div class="card-body flex flex-col justify-evenly items-center">
+              <h2 class="card-title mx-auto font-extrabold text-2xl">
+                12.90$ - 18.85$
+              </h2>
+              <p class="text-base font-medium">Orange</p>
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <div class="flex flex-row justify-around w-full">
+                <a href="" class="btn btn-error">buy</a>
+              <a href="#wrapper" class="modalclose btn btn-outline btn-error">close</a>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div
             class="card card-compact w-64 md:w-56 h-80 mb-10 bg-base-100 shadow-xl bg-slate-100"
           >
@@ -381,9 +503,59 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <button class="btn btn-link">Link</button>
+              <a href="#modalbox3"><button class="btn btn-link">Link</button></a>
             </div>
           </div>
+
+          <div id="modalbox3" class="modal">
+            <div class="modalcontent w-64 md:w-56 h-80">
+              <div
+                 class="card card-compact w-64 md:w-56 h-80 mb-10 bg-base-100 shadow-xl bg-slate-100"
+              >
+                <figure><img src="./images/fruit8.png" alt="Shoes" /></figure>
+                <div class="card-body flex flex-col justify-evenly items-center">
+              <h2 class="card-title mx-auto font-extrabold text-2xl">
+                12.90$ - 18.85$
+              </h2>
+              <p class="text-base font-medium">Red Dragon</p>
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <div class="flex flex-row justify-around w-full">
+                <a href="" class="btn btn-error">buy</a>
+              <a href="#wrapper" class="modalclose btn btn-outline btn-error">close</a>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
           <div
             class="card card-compact w-64 md:w-56 h-80 mb-10 bg-base-100 shadow-xl bg-slate-100"
           >
@@ -421,10 +593,59 @@
                   class="mask mask-star-2 bg-orange-400"
                 />
               </div>
-              <button class="btn btn-link">Link</button>
+              <a href="#modalbox4"><button  class="btn btn-link">Link</button></a>
             </div>
           </div>
         </div>
+
+        <div id="modalbox4" class="modal">
+          <div class="modalcontent w-64 md:w-56 h-80">
+            <div
+               class="card card-compact w-64 md:w-56 h-80 mb-10 bg-base-100 shadow-xl bg-slate-100"
+            >
+              <figure><img src="./images/fruit9.png" alt="Shoes" /></figure>
+              <div class="card-body flex flex-col justify-evenly items-center">
+            <h2 class="card-title mx-auto font-extrabold text-2xl">
+              12.90$ - 18.85$
+            </h2>
+            <p class="text-base font-medium">Banana</p>
+            <div class="rating">
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+                checked
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+              />
+            </div>
+            <div class="flex flex-row justify-around w-full">
+              <a href="" class="btn btn-error">buy</a>
+            <a href="#wrapper" class="modalclose btn btn-outline btn-error">close</a>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <button class="btn btn-error text-white w-36 h-16 text-center mx-auto">
           Shop All
         </button>
