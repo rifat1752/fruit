@@ -86,18 +86,20 @@
               tabindex="0"
               class="menu menu-sm dropdown-content flex flex-col md:flex-row items-center justify-between z-[1] p-2 bg-base-100 rounded w-32 md:w-96 h-auto text-black bg-base-300"
             >
-              <li><a class="text-base font-bold">Home</a></li>
-              <li><a class="text-base font-bold">About Us</a></li>
-              <li><a class="text-base font-bold">Shop</a></li>
-              <li><a class="text-base font-bold">All Fruits</a></li>
+              <li><a href="#" class="text-base font-bold">Home</a></li>
+              <li><a href="#meet" class="text-base font-bold">About Us</a></li>
+              <li><a href="#wrapper" class="text-base font-bold">Shop</a></li>
+              <li>
+                <a href="#fruit" class="text-base font-bold">All Fruits</a>
+              </li>
             </ul>
           </div>
 
           <ul class="hidden lg:flex menu menu-horizontal text-lg">
-            <li><a>Home</a></li>
-            <li><a>About Us</a></li>
-            <li><a>Shop</a></li>
-            <li><a>All Fruits</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#meet">About Us</a></li>
+            <li><a href="#wrapper">Shop</a></li>
+            <li><a href="#fruit">All Fruits</a></li>
           </ul>
           <div class="flex">
             <img src="./images/logo.png" alt="logo" />
@@ -213,7 +215,10 @@
       <div
         class="fruit hidden z-10 -mt-20 lg:flex w-10/12 justify-around mx-auto rounded bg-white shadow-lg h-44"
       >
-        <div class="fruit-card flex flex-col justify-evenly items-center">
+        <div
+          id="fruit"
+          class="fruit-card flex flex-col justify-evenly items-center"
+        >
           <img src="./images/fruit1.png" alt="" />
           <p>Strawberry</p>
         </div>
@@ -676,7 +681,7 @@
         </button>
       </section>
       <!-- meet the team -->
-      <section class="my-24">
+      <section id="meet" class="my-24">
         <div
           class="hero min-h-screen"
           style="background-image: url(./images/team.png)"
